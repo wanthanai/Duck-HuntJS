@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('/pixel.TTF');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #64b0ff url('./img/back.png') repeat-x fixed bottom;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+
+    cursor: crosshair;
+    overflow: hidden;
+}
+.background_temp {
+    background: #64b0ff url('./img/back.png') repeat-x fixed bottom;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+    cursor: crosshair;
+    overflow: hidden;
+}
+
+img{
+    user-select: none;
+}
+img:nth-of-type(1) {
+    position: absolute;
+    bottom: 100px;
+    left: 0%;
+    transform: scale(1);
+    pointer-events: none;
+}
+img:nth-of-type(2) {
+    position: absolute;
+    bottom: 130px;
+    left: 20%;
+    transform: scale(1.4);
+    z-index: 99;
+    pointer-events: none;
+}
+img:nth-of-type(3) {
+    position: absolute;
+    bottom: 40px;
+    left: 80%;
+    transform: scale(0.7);
+    pointer-events: none;
+}
+
+.winning {
+    font-family: 'pixel';
+    color: #fff;
+    font-size: 6em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
+    
+    opacity: 0;
+    letter-spacing: 3vw;
+    transform: scale(1.5);
+    transition: 2s ease;
+
+    pointer-events: none;
+}
+
+.duck {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    z-index: 80;
+}
+.duck_wrapper {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    z-index: 80;
+}
+
+.button_wrapper {
+    display: none;
+}
+button {
+    font-family: 'pixel';
+    width: 8vw;
+    font-size: 1vw;
+    opacity: 0;
+
+    padding: 10px;
+    margin-top: 3em;
+    transition: .5s ease ;
+
+    color: #fff;
+    background: #181717;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.4);
+
+}
+button:hover {
+    background: #fff;
+    color: #181717;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
+}
+
